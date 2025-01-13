@@ -14,7 +14,7 @@ baro = rm.open_resource('ASRLCOM8::INSTR',
                         read_termination='>',
                         parity=pyvisa.constants.Parity.even,
                         data_bits=7
-)
+                        )
 
 # get serial number of instrument
 dev_info = baro.query('?')
@@ -52,7 +52,6 @@ with open('PT.csv', 'w') as fp:
 
 print(x)
 print(y)
-
 
 
 baro.close()
